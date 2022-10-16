@@ -1,9 +1,10 @@
-#%%
+
+# 安裝過要套件要放進資料夾 pip freeze > requirements.txt
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import numpy as np
 # 中文字顯示
-#%%
+
 def equalize(former):
     n = 110
     fig, ax = plt.subplots(1,1)
