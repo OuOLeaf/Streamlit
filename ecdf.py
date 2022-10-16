@@ -2,13 +2,16 @@
 # 安裝過要套件要放進資料夾 pipreqs --encoding=utf8 .\test
 from scipy.stats import norm
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 import numpy as np
 # 中文字顯示
 
 def equalize(former):
     n = 110
     fig, ax = plt.subplots(1,1)
-    plt.rcParams['font.sans-serif'] = ['Taipei Sans TC Beta']
+    fontP = font_manager.FontProperties()
+    fontP.set_family('SimHei')
+    fontP.set_size(14)
     x = np.linspace(0, 100, 1000)
     y1 = norm.cdf(x, loc = 50, scale = 15) * n
     y2 = norm.cdf(x, loc = 45, scale = 13) * n
