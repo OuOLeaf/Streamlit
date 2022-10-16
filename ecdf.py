@@ -1,5 +1,5 @@
 
-# 安裝過要套件要放進資料夾 pip freeze > requirements.txt
+# 安裝過要套件要放進資料夾 pipreqs --encoding=utf8 .\test
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import numpy as np
