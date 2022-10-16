@@ -4,13 +4,14 @@ from scipy.stats import norm
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # 中文字顯示
 
 def equalize(former):
-    n = 110
-    fig, ax = plt.subplots(1,1)
     plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei'] 
     plt.rcParams['axes.unicode_minus'] = False
+    n = 110
+    fig, ax = plt.subplots(1,1)
     x = np.linspace(0, 100, 1000)
     y1 = norm.cdf(x, loc = 50, scale = 15) * n
     y2 = norm.cdf(x, loc = 45, scale = 13) * n
