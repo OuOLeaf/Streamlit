@@ -1,0 +1,1 @@
+# 安裝過要套件要放進資料夾 pipreqs --encoding=utf8 .\test
