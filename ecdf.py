@@ -74,7 +74,7 @@ def equalize_pltly(former):
                       xaxis_range = [0, 100],
                       yaxis_range = [-2, 110],
                       showlegend=True,
-                      margin = dict(l = 20, r = 20, t = 20, b = 20),
+                      margin = dict(l = 90, r = 20, t = 20, b = 20),
                       autosize = False,
                       width = 700,
                       height = 550,
