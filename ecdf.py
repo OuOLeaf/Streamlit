@@ -25,9 +25,9 @@ def data(former):
     yls.append(round(corr, 1))
     yls.append(round(former, 1))
     xls = [0, 20, 40, 60, 80, 100]
-    xls.append(round(ability, 1))
+    # xls.append(round(ability, 1))
 
-    return [[x, y1, y2, xls, yls], [lx, vx, vy, ly1, ly2, corr]]
+    return [[x, y1, y2, xls, yls], [lx, vx, vy, ly1, ly2, corr, ability]]
 #%%
 #%%
 # plotly
@@ -36,7 +36,7 @@ def equalize_pltly(former):
     # loading data
     info = data(former)
     x, y1, y2, xls, yls = info[0] 
-    lx, vx, vy, ly1, ly2, corr = info[1] 
+    lx, vx, vy, ly1, ly2, corr, ability = info[1] 
 
     # initialize graph
     fig = go.Figure()
@@ -52,6 +52,7 @@ def equalize_pltly(former):
     c2dict = dict(color = 'orange', width = 4)
     fig.add_trace(go.Scatter(x = x, y = y1, opacity=0.8, name = "前屆", line = c1dict))
     fig.add_trace(go.Scatter(x = x, y = y2, opacity=0.8, name = "應屆", line = c2dict))
+    
     
     # layout(ticks, grid)
     xdict = {'tickmode' : "array"
@@ -74,13 +75,16 @@ def equalize_pltly(former):
                       xaxis_range = [0, 100],
                       yaxis_range = [-2, 110],
                       showlegend=True,
-                      margin = dict(l = 90, r = 20, t = 20, b = 20),
+                      margin = dict(l = 90, r = 20, t = 20, b = 60),
                       autosize = False,
                       width = 700,
                       height = 550,
                       font = dict(size = 15))
-
-    return [fig, round(corr, 1)]
+    # rotate ticks
+    # fig.update_xaxes(tickangle=30)
+    # ticks
+    
+    return [fig, round(corr, 1), round(ability, 2)]
 
 equalize_pltly(23)[0]
 #%%
