@@ -1,3 +1,4 @@
+girth==0.8.0
 matplotlib==3.5.2
 numpy==1.21.3
 pandas==1.4.3
