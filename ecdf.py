@@ -2,6 +2,7 @@
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import numpy as np
+
 # 中文字顯示
 #%%
 def data(former):

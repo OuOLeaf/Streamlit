@@ -2,7 +2,8 @@ import streamlit as st
 import ecdf
 import forex
 import pandas as pd
-import openpxyl
+import openpyxl
+
 def fun():
     st.write('fun click')
     return 0

@@ -1,6 +1,7 @@
 girth==0.8.0
 matplotlib==3.5.2
 numpy==1.21.3
+openpyxl==3.0.10
 pandas==1.4.3
 plotly==5.10.0
 scipy==1.9.0
